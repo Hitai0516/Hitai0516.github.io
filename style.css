@@ -1,10 +1,14 @@
 body {
   background-color:black;
-  color:white;
+  color:silver;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 h1 {
   text-align:center;
+  color:gold;
+  font-size: 50px;
 }
 p {
-  
+  line-height: 30px;
 }
