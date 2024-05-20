@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="chwatest">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>全華面試Demo</title>
+        <!--Bootstrap4的核心CSS文件-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--jQuery文件-->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <!--BootStrap4的核心JavaScript文件-->
+        <script src="js/bootstrap.min.js"></script>
+
+        <style>
+            body{
+                overflow: scroll;
+            }
+            @font-face {
+                font-family: custom-sans-serif;
+                src: local("Heiti TC"), local("微軟正黑體"), local("Microsoft JhengHei");
+                unicode-range: U+4E00-9FFF;
+            }
+            @font-face {
+                font-family: custom-sans-serif;
+                src: local("Arial");
+                unicode-range: U+00-024F;
+            }
+            html {
+                width:100%;
+                height:100%;
+                margin:0;
+                padding:0;
+                font-size: 1rem;
+            }
+            .titleArea{
+                font-size:30px;
+                text-align:center;			
+                font-weight:bold;
+                color:white;
+                background: #003B89;
+                /* background: linear-gradient(0deg, rgba(87,22,113,1) 0%, rgba(119,66,141,1) 100%); */
+                width:100%;
+                height:70px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }        
+            .buttonStyle{
+                text-align:left;
+                font-size:24px;			
+                border-radius: 0px;
+                width:100%;
+            }
+            .card-header{
+                padding: 0px;
+                background-color: white;
+            }
+            .chapter{
+                width:100%;
+                text-align: left;
+                margin-bottom: 1em;
+            }
+            .chapter > .card{
+                border-radius: 10px 10px 10px 10px !important;
+                border:1px solid #c9c9c9 !important;
+            }
+            .chapterHead{			
+			color: #0B346E;
+			font-weight: bold;
+			background-color: #FEF2D5;
+		    }
+        </style>
+    </head>
+
+    <body>
+        <div class="titleArea">升科大四技 - 機械製造Follow Me  重點線上聽</div>
+
+        <div style="text-align:center">
+		    <div id="contain" class="btn-group-vertical" role="group" aria-label="Basic example" style="width:90%;margin-bottom:1rem;margin-top:2rem">
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var cardhtml = "";
+            $(document).ready(function() {
+                $.getJSON('STRU.txt', function(data) {
+                    cardhtml = "";
+                    //主選單1
+                    cardhtml = "<div class='accordion chapter' id='accChapter1'>";
+                        //主標題1
+                        cardhtml += "<div class='card-header' id='heading_Ch1'>";
+                            cardhtml += "<h2 class='mb-0'>";
+                            cardhtml += "<button class='btn buttonStyle chapterHead' type='button' data-toggle='collapse' data-target='#Ch1' aria-expanded='false' aria-controls='Ch1'>" + data[0].Chapter_name +"</button>";
+                            cardhtml += "</h2>";
+                        cardhtml += "</div>";
+                        //子選單1
+                        cardhtml += "<div id='Ch1' class='collapse' aria-labelledby='heading_Ch1' data-parent='#accChapter1'>";
+                            cardhtml += "<div class='card-body'>";
+                                cardhtml += "<div class='accordion' id='accordion1' style='width:100%;text-align: left;'>";
+                                    //子區塊1-1
+                                    cardhtml += "<div class='card'>";
+                                        //子標題1-1
+                                        cardhtml += "<div class='card-header' id='heading_Ch1'>";
+                                            cardhtml += "<h2 class='mb-0'>";
+                                                cardhtml += "<button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch1_0' aria-expanded='false' aria-controls='collapse_Ch1_0'>" + data[0].Item[0].Title +"</button>";
+                                            cardhtml += "</h2>";
+                                        cardhtml += "</div>";
+                                        //子內容1-1
+                                        cardhtml += "<div id='collapse_Ch1_0' class='collapse' aria-labelledby='heading_Ch1_0' data-parent='#accordion1' style>";
+                                            cardhtml += "<div class='card-body'>";
+                                                cardhtml += "<div class='text'>" + data[0].Item[0].Content + "</div>";
+                                            cardhtml += "</div>";
+                                        cardhtml += "</div>";
+                                    cardhtml += "</div>";
+                                    //子區塊1-2
+                                    cardhtml += "<div class='card'>";
+                                        //子標題1-2
+                                        cardhtml += "<div class='card-header' id='heading_Ch1'>";
+                                            cardhtml += "<h2 class='mb-0'>";
+                                                cardhtml += "<button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch1_1' aria-expanded='false' aria-controls='collapse_Ch1_1'>" + data[0].Item[1].Title +"</button>";
+                                            cardhtml += "</h2>";
+                                        cardhtml += "</div>";
+                                        //子內容1-2
+                                        cardhtml += "<div id='collapse_Ch1_1' class='collapse' aria-labelledby='heading_Ch1_1' data-parent='#accordion1' style>";
+                                            cardhtml += "<div class='card-body'>";
+                                                cardhtml += "<div class='text' >" + data[0].Item[1].Content + "</div>";
+                                            cardhtml += "</div>";
+                                        cardhtml += "</div>";
+                                    cardhtml += "</div>";
+                                    //子區塊1-3
+                                    cardhtml += "<div class='card'>";
+                                        //子標題1-3
+                                        cardhtml += "<div class='card-header' id='heading_Ch1'>";
+                                            cardhtml += "<h2 class='mb-0'>";
+                                                cardhtml += "<button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch1_2' aria-expanded='false' aria-controls='collapse_Ch1_2'>" + data[0].Item[2].Title +"</button>";
+                                            cardhtml += "</h2>";
+                                        cardhtml += "</div>";
+                                        //子內容1-3
+                                        cardhtml += "<div id='collapse_Ch1_2' class='collapse' aria-labelledby='heading_Ch1_1' data-parent='#accordion1' style>";
+                                            cardhtml += "<div class='card-body'>";
+                                                cardhtml += "<div class='text' >" + data[0].Item[2].Content + "</div>";
+                                            cardhtml += "</div>";
+                                        cardhtml += "</div>";
+                                    cardhtml += "</div>";
+                                cardhtml += "</div>";
+                            cardhtml += "</div>";
+                        cardhtml += "</div>";                                    
+                    cardhtml += "</div>";
+                    //主選單2
+                    cardhtml += "<div class='accordion chapter' id='accChapter2'>";
+                        //主標題2
+                        cardhtml += "<div class='card-header' id='heading_Ch2'>";
+                            cardhtml += "<h2 class='mb-0'>";
+                            cardhtml += "<button class='btn buttonStyle chapterHead' type='button' data-toggle='collapse' data-target='#Ch2' aria-expanded='false' aria-controls='Ch2'>" + data[1].Chapter_name +"</button>";
+                            cardhtml += "</h2>";
+                        cardhtml += "</div>";
+                        //子選單2
+                        cardhtml += "<div id='Ch2' class='collapse' aria-labelledby='heading_Ch2' data-parent='#accChapter2'>";
+                            cardhtml += "<div class='card-body'>";
+                                cardhtml += "<div class='accordion' id='accordion2' style='width:100%;text-align: left;'>";
+                                    //子區塊2-1
+                                    cardhtml += "<div class='card'>";
+                                        //子標題2-1
+                                        cardhtml += "<div class='card-header' id='heading_Ch2_0'>";
+                                            cardhtml += "<h2 class='mb-0'>";
+                                                cardhtml += "<button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch2_0' aria-expanded='false' aria-controls='collapse_Ch2_0'>" + data[1].Item[0].Title +"</button>";
+                                            cardhtml += "</h2>";
+                                        cardhtml += "</div>";
+                                        //子內容2-1
+                                        cardhtml += "<div id='collapse_Ch2_0' class='collapse' aria-labelledby='heading_Ch2_0' data-parent='#accordion2' style>";
+                                            cardhtml += "<div class='card-body'>";
+                                                cardhtml += "<div class='text'>" + data[1].Item[0].Content + "</div>";
+                                            cardhtml += "</div>";
+                                        cardhtml += "</div>";
+                                    cardhtml += "</div>";
+                                    //子區塊2-2
+                                    cardhtml += "<div class='card'>";
+                                        //子標題2-2
+                                        cardhtml += "<div class='card-header' id='heading_Ch2_1'>";
+                                            cardhtml += "<h2 class='mb-0'>";
+                                                cardhtml += "<button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch2_1' aria-expanded='false' aria-controls='collapse_Ch2_1'>" + data[1].Item[1].Title +"</button>";
+                                            cardhtml += "</h2>";
+                                        cardhtml += "</div>";
+                                        //子內容2-2
+                                        cardhtml += "<div id='collapse_Ch2_1' class='collapse' aria-labelledby='heading_Ch2_1' data-parent='#accordion2' style>";
+                                            cardhtml += "<div class='card-body'>";
+                                                cardhtml += "<div class='text' >" + data[1].Item[1].Content + "</div>";
+                                            cardhtml += "</div>";
+                                        cardhtml += "</div>";
+                                    cardhtml += "</div>";
+                                cardhtml += "</div>";
+                            cardhtml += "</div>";
+                        cardhtml += "</div>";                                    
+                    cardhtml += "</div>";
+
+                    $('#contain').append(cardhtml);
+                })
+
+            })
+        </script>
+
+        <!--script>
+            var cardhtml = "";
+            $(function() {
+                $.each(STRU, function(index, cha) {
+                    console.log(cha);
+                    cardhtml = "";
+                    cardhtml = "<div class='accordion chapter' id='accChapter'>";
+                    cardhtml = cardhtml + "</div>";
+                })
+                $("#contain").append(cardhtml);
+            })
+        </script-->
+    </body>
+    
+</html>

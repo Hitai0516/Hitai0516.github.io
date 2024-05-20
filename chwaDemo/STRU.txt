@@ -1,0 +1,32 @@
+[
+	{
+		"Chapter_name": "CH1　機械製造的演進",
+		"Item": [
+			{
+				"Content": "請放文字：「測試文字測試文字測試文字[換行]測試文字測試文字測試文字」，第一行文字為黑色，第二行文字為紅色",
+				"Title": "1.加工機器的演進"
+			},
+			{
+				"Content": "請放一張圖片，圖片網址為：「https://dummyimage.com/600x400/000/fff」",
+				"Title": "2.機械製造的過程"
+			},
+			{
+				"Content": "請嵌入一段Youtube影片，影片網址為：「https://www.youtube.com/watch?v=4wA-HEqmhP0」",
+				"Title": "3.切削性加工法"
+			}
+		]
+	},
+	{
+		"Chapter_name": "CH2　材料與加工",
+		"Item": [
+			{
+				"Content": "請放超連結，網址為：「https://www.chwa.com.tw」，點選後會另開分頁",
+				"Title": "1.材料的分類"
+			},
+			{
+				"Content": "請在網頁上顯示方程式「根號2」，請用MathML表達，勿用圖片",
+				"Title": "2.鐵金屬材料"
+			}
+		]
+	}
+]

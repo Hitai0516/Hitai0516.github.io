@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="chwatest">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>全華面試Demo</title>
+        <!--Bootstrap4的核心CSS文件-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--jQuery文件-->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <!--BootStrap4的核心JavaScript文件-->
+        <script src="js/bootstrap.min.js"></script>
+
+        <style>
+            @font-face {
+                font-family: custom-sans-serif;
+                src: local("Heiti TC"), local("微軟正黑體"), local("Microsoft JhengHei");
+                unicode-range: U+4E00-9FFF;
+            }
+            @font-face {
+                font-family: custom-sans-serif;
+                src: local("Arial");
+                unicode-range: U+00-024F;
+            }
+            body{
+                padding-left: 10%;
+                padding-right:  10%;
+                overflow: scroll;
+            }            
+            html {
+                width:100%;
+                height:100%;
+                margin:0;
+                padding:0;
+                font-size: 1rem;
+            }
+            .titleArea{
+                font-size:30px;
+                text-align:center;			
+                font-weight:bold;
+                color:white;
+                background: #003B89;
+                /* background: linear-gradient(0deg, rgba(87,22,113,1) 0%, rgba(119,66,141,1) 100%); */
+                width:100%;
+                height:70px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }        
+            .buttonStyle{
+                text-align:left;
+                font-size:24px;			
+                border-radius: 0px;
+                width:100%;
+            }
+            .card-header{
+                padding: 0px;
+                background-color: white;
+            }
+            .chapter{
+                width:100%;
+                text-align: left;
+                margin-bottom: 1em;
+            }
+            .chapter > .card{
+                border-radius: 10px 10px 10px 10px !important;
+                border:1px solid #c9c9c9 !important;
+            }
+            .chapterHead{			
+			color: #0B346E;
+			font-weight: bold;
+			background-color: #FEF2D5;
+		    }
+            @media only screen and (max-width: 768px){
+                body {
+                    padding: 0px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="titleArea">升科大四技 - 機械製造Follow Me  重點線上聽</div>
+        
+        <div style="text-align:center">
+		    <div id="contain" class="btn-group-vertical" role="group" aria-label="Basic example" style="width:90%;margin-bottom:1rem;margin-top:2rem">
+                <!--主選單1-->
+                <div class='accordion chapter' id='accChapter1'>
+                    <!--主標題1-->
+                    <div class='card-header' id='heading_Ch1'>
+                        <h2 class='mb-0'>
+                            <button class='btn buttonStyle chapterHead' type='button' data-toggle='collapse' data-target='#Ch1' aria-expanded='false' aria-controls='Ch1'>CH1 機械製造的演進</button>
+                        </h2>
+                    </div>
+                    <!--子選單1-->
+                    <div id='Ch1' class='collapse' aria-labelledby='heading_Ch1' data-parent='#accChapter1'>
+                        <div class='card-body'>
+                            <div class='accordion' id='accordion1' style='width:100%;text-align: left;'>
+                                <!--子區塊1-1-->
+                                <div class='card'>
+                                    <!--子標題1-1-->
+                                    <div class='card-header' id='heading_Ch1'>
+                                        <h2 class='mb-0'>
+                                            <button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch1_0' aria-expanded='false' aria-controls='collapse_Ch1_0'>1.加工機器的演進</button>
+                                        </h2>
+                                    </div>
+                                    <!--子內容1-1-->
+                                    <div id='collapse_Ch1_0' class='collapse' aria-labelledby='heading_Ch1_0' data-parent='#accordion1' style>
+                                        <div class='card-body'>
+                                            <div class='text' style='color:black'>測試文字測試文字測試文字</div>
+                                            <br>
+                                            <div class="text" style='color:red'>測試文字測試文字測試文字</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--子區塊1-2-->
+                                <div class='card'>
+                                    <!--子標題1-2-->
+                                    <div class='card-header' id='heading_Ch1'>
+                                        <h2 class='mb-0'>
+                                            <button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch1_1' aria-expanded='false' aria-controls='collapse_Ch1_1'>2.機械製造的過程</button>
+                                        </h2>
+                                    </div>
+                                    <!--子內容1-2-->
+                                    <div id='collapse_Ch1_1' class='collapse' aria-labelledby='heading_Ch1_1' data-parent='#accordion1' style>
+                                        <div class='card-body'>
+                                            <img width="600" height="400" src="https://dummyimage.com/600x400/000/fff">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--子區塊1-3-->
+                                <div class='card'>
+                                    <!--子標題1-3-->
+                                    <div class='card-header' id='heading_Ch1'>
+                                        <h2 class='mb-0'>
+                                            <button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch1_2' aria-expanded='false' aria-controls='collapse_Ch1_2'>3.切削性加工法</button>
+                                        </h2>
+                                    </div>
+                                    <!--子內容1-3-->
+                                    <div id='collapse_Ch1_2' class='collapse' aria-labelledby='heading_Ch1_1' data-parent='#accordion1' style>
+                                        <div class='card-body'>
+                                            <iframe max-width="100%" height="200px" src="https://www.youtube.com/embed/4wA-HEqmhP0?si=eV0qLhQQZ7uyoj98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                  
+                </div>
+                <!--主選單2-->
+                <div class='accordion chapter' id='accChapter2'>
+                    <!--主標題2-->
+                    <div class='card-header' id='heading_Ch2'>
+                        <h2 class='mb-0'>
+                        <button class='btn buttonStyle chapterHead' type='button' data-toggle='collapse' data-target='#Ch2' aria-expanded='false' aria-controls='Ch2'>CH2 材料與加工</button>
+                        </h2>
+                    </div>
+                    <!--子選單2-->
+                    <div id='Ch2' class='collapse' aria-labelledby='heading_Ch2' data-parent='#accChapter2'>
+                        <div class='card-body'>
+                            <div class='accordion' id='accordion2' style='width:100%;text-align: left;'>
+                                <!--子區塊2-1-->
+                                <div class='card'>
+                                    <!--子標題2-1-->
+                                    <div class='card-header' id='heading_Ch2_0'>
+                                        <h2 class='mb-0'>
+                                            <button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch2_0' aria-expanded='false' aria-controls='collapse_Ch2_0'>1.材料的分類</button>
+                                        </h2>
+                                    </div>
+                                    <!--子內容2-1-->
+                                    <div id='collapse_Ch2_0' class='collapse' aria-labelledby='heading_Ch2_0' data-parent='#accordion2' style>
+                                        <div class='card-body'>
+                                            <a href="https://www.chwa.com.tw" target="_blank">https://www.chwa.com.tw</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--子區塊2-2-->
+                                <div class='card'>
+                                    <!--子標題2-2-->
+                                    <div class='card-header' id='heading_Ch2_1'>
+                                        <h2 class='mb-0'>
+                                            <button class='btn buttonStyle collapsed' type='button' data-toggle='collapse' data-target='#collapse_Ch2_1' aria-expanded='false' aria-controls='collapse_Ch2_1'>2.鐵金屬材料</button>
+                                        </h2>
+                                    </div>
+                                    <!--子內容2-2-->
+                                    <div id='collapse_Ch2_1' class='collapse' aria-labelledby='heading_Ch2_1' data-parent='#accordion2' style>
+                                        <div class='card-body'>
+                                            <math><msqrt><mtext>2</mtext></msqrt></math>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text" src="STRU.txt"></script>
+    </body>
+    
+</html>
