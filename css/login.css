@@ -4,7 +4,7 @@
 * {
     box-sizing: border-box;
 }
-#loginBlock { /*登入區塊*/
+#loginBlock {
     width: auto;
     margin: 160px 10px 0px;
     padding: 60px 20px 80px;
@@ -72,10 +72,23 @@
     .form-group label {
         text-align: center;
         font-size: 16px;
-        margin: auto 0;
+        margin: auto 0px auto auto;
         width: 50px;
     }
-    #login-eye {
-    top: 28%;
+    input{
+        margin: auto auto auto 0px;
+        max-width: 400px;
     }
+    #loginBlock {
+        max-width: 600px;
+        margin: 160px auto 0px;
+    }
+    #loginEye {
+        top: 33%;
+        right: 12%;
+    } 
+    #loginBtn {
+        margin: auto;
+        max-width: 300px;
+    } 
 }
