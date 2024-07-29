@@ -65,19 +65,6 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-.navbar {
-    background-color: var(--chwablue);
-}
-.navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-    margin: auto;
-    cursor: default;
-}
-#navBtn {
-    top: 50%;
-    align-items: center;
-}
 @media screen and (min-width : 480px) {
     .form-group {
         display: flex;
@@ -90,8 +77,5 @@
     }
     #login-eye {
     top: 28%;
-    }
-    .navbar-nav {
-        margin-right: 0px;
     }
 }
