@@ -1,0 +1,97 @@
+:root {
+    --chwablue: #003C8A;
+}
+* {
+    box-sizing: border-box;
+}
+#loginBlock { /*登入區塊*/
+    width: auto;
+    margin: 160px 10px 0px;
+    padding: 60px 20px 80px;
+    border: solid 2px;
+    border-color: var(--chwablue);
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px -3px gray;
+}
+#loginBlock h2 {
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px 2px 1px var(--chwablue);
+    cursor: default;
+}
+.form-group input {
+    height: 32px;
+    min-width: 150px;
+    font-size: 16px;
+    padding: 18px 10px;
+    box-shadow: inset 0px 0px 3px gray;
+}
+#passwordContainer {
+    position: relative;
+}
+#passwordContainer input{
+    padding-right: 35px;
+}
+#loginEye {
+    opacity: 0.6;
+    width: 20px;
+    position: absolute;
+    top: 63%;
+    right: 10px;
+    cursor: pointer;
+}
+#loginBtn {
+    color: white;
+    background-color: var(--chwablue);
+    margin: 0 80px;
+    min-width: 100px;
+}
+#loginBtn:hover {
+    transform: translate(-0.5px, -0.5px);
+    box-shadow: 1px 1px 1px #DDDDDD;
+}
+#spinnerContainer {
+    position:static;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#spinner {
+    color: var(--chwablue);
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.navbar {
+    background-color: var(--chwablue);
+}
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto;
+    cursor: default;
+}
+#navBtn {
+    top: 50%;
+    align-items: center;
+}
+@media screen and (min-width : 480px) {
+    .form-group {
+        display: flex;
+    }
+    .form-group label {
+        text-align: center;
+        font-size: 16px;
+        margin: auto 0;
+        width: 50px;
+    }
+    #login-eye {
+    top: 28%;
+    }
+    .navbar-nav {
+        margin-right: 0px;
+    }
+}
