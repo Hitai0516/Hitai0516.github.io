@@ -4,6 +4,9 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background-color: var(--chwablue);
+}
 .navbar {
     padding: 10px 14px 10px calc(50% - 48px);
     background-color: var(--chwablue);
@@ -27,8 +30,9 @@
     align-items: center;
 }
 .content {
-    padding: 5px 20px 0px 20px;
+    margin: 5px 20px 0px 20px;
     margin-top: 60px;
+    background-color: white;
 }
 @media screen and (min-width : 480px) {
     .navbar {
@@ -38,6 +42,7 @@
         margin: auto 0px auto auto;
     }
     .content {
-        padding: 30px 120px 0px 120px;
+        margin: 30px 120px 0px 120px;
+        border-radius: 10px;
     }
 }
